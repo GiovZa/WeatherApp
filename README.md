@@ -38,10 +38,10 @@ Meeting notes: We discussed the future meeting times and determined everyone's r
 |mirrak2         |First week                       |Create GitHub repository and setup environment                       |
 |gzava3          |First week                       |Setup environment                                                    |
 |ychen275        |First week                       |Setup environment                                                    |
+|ay23            |First week                       |Setup environment                                                    |
 |alavoie3        |First week                       |Setup environment                                                    |
 |ktsuji2         |First week                       |Setup environment                                                    |
 |yctsou2         |First week                       |Setup environment                                                    |
-|                |                                 |                                                                     |
 </br>
 
 
