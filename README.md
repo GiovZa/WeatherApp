@@ -3,7 +3,7 @@ The code for CS427 Android app.
 <br/>
 <br/>
 
-<b>Team # member information</b>
+<b>Team #33 member information</b>
 <br/>
 | Name           | NetID         | GitHub ID    | Role          | Experience    |
 | -------------  | ------------- | ------------ | ------------- | ------------- |
@@ -28,20 +28,20 @@ Meeting location (zoom link): https://illinois.zoom.us/j/89701864848?pwd=5HMFImE
 </br>
 <b>Week 1</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: mdquan2, mirrak2, gzava3, ychen275, alavoie3, ktsuji2, yctsou2
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We discussed the future meeting times and determined everyone's roles. We also introduced ourselves and discussed how long our future meetings should be. Lastly, we created a list of tasks that need to be completed for next week.
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |First week                       |Update README with progress, submit PDF to TA, and setup environment |
+|mirrak2         |First week                       |Create GitHub repository and setup environment                       |
+|gzava3          |First week                       |Setup environment                                                    |
+|ychen275        |First week                       |Setup environment                                                    |
+|alavoie3        |First week                       |Setup environment                                                    |
+|ktsuji2         |First week                       |Setup environment                                                    |
+|yctsou2         |First week                       |Setup environment                                                    |
+|                |                                 |                                                                     |
 </br>
 
 
