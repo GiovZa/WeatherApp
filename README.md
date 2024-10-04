@@ -8,13 +8,13 @@ The code for CS427 Android app.
 | Name           | NetID         | GitHub ID    | Role          | Experience    |
 | -------------  | ------------- | ------------ | ------------- | ------------- |
 |Michael Quan    |mdquan2        |midquan       |Manager        |Java, Python, PHP, Javascript, SQL                  |            
-|Mirra Kannappan |mirrak2        |mirrakannappan|Team Lead      |Python, Java, C++, JavaScript                       |
+|Mirra Kannappan |mirrak2        |mirrakannappan|Tech Lead      |Python, Java, C++, JavaScript                       |
 |Giovanni Zavalza|gzava3         |gzava3        |Developer      |Java, Python, C++, Web Dev                          |
 |Yujia Chen      |ychen275       |yujiachen71   |Developer      |Java, Python                                        |
 |Anthony Yang    |ay23           |anthonyyang87 |Developer      |Python, Javascript, C++, Powershell                 |
 |Antoine Lavoie  |alavoie3       |antoinelavoie1|Developer      |Python, Java, SQL                                   |
 |Kyle Tsuji      |ktsuji2        |kyletsuji     |Developer      |Java, Python, C++                                   |
-|Yueh-Chen Tsou  |yctsou2        |50720457      |Developer      |Java, Python, C, HTML, Database management, MySql   |
+|Yueh-Chen Tsou  |yctsou2        |yuehchen-tsou |Developer      |Java, Python, C, HTML, Database management, MySql   |
 <br/>
 
 
