@@ -28,7 +28,7 @@ Meeting location (zoom link): https://illinois.zoom.us/j/89701864848?pwd=5HMFImE
 </br>
 <b>Week 1</b>
 </br>
-Members present: mdquan2, mirrak2, gzava3, ychen275, alavoie3, ktsuji2, yctsou2
+Members present: Michael Quan, Mirra Kannappan, Giovanni Zavalza, Yujia Chen, Antoine Lavoie, Kyle Tsuji, Yueh-Chen Tsou
 </br>
 Meeting notes: We discussed the future meeting times and determined everyone's roles. We also introduced ourselves and discussed how long our future meetings should be. Lastly, we created a list of tasks that need to be completed for next week.
 </br>
