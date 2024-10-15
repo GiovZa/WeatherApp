@@ -28,7 +28,7 @@ Meeting location (zoom link): https://illinois.zoom.us/j/89701864848?pwd=5HMFImE
 </br>
 <b>Week 1</b>
 </br>
-Members present: Michael Quan, Mirra Kannappan, Giovanni Zavalza, Yujia Chen, Antoine Lavoie, Kyle Tsuji, Yueh-Chen Tsou
+Members present: mdquan2, mirrak2, gzava3, ychen275, alavoie3, ktsuji2, yctsou2
 </br>
 Meeting notes: We discussed the future meeting times and determined everyone's roles. We also introduced ourselves and discussed how long our future meetings should be. Lastly, we created a list of tasks that need to be completed for next week.
 </br>
@@ -47,21 +47,23 @@ Meeting notes: We discussed the future meeting times and determined everyone's r
 
 <b>Week 2</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: mdquan2, gzava3, ychen275,  ay23, alavoie3, ktsuji2, yctsou2
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: Wec completed Milestone 1 and sent the PDF to the TA in the previous week, additionally the Github and environments were set up as well. We discussed Milestone 2 and what we would work on for it. Additionally, we delegated everyone to have separate parts and made a Google Doc to collaborate on. We also brainstormed on how we would like to develop the app as well. 
+</br>
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |Wrote README with progress, submitted PDF for TA, and setup environment  |Update README with progress, work on Milestone 2 pdf |
+|mirrak2         |Create GitHub repository and setup environment                           |Work on Milestone 2 pdf                              |
+|gzava3          |Setup environment                                                        |Work on Milestone 2 pdf                              |
+|ychen275        |Setup environment                                                        |Work on Milestone 2 pdf                              |
+|ay23            |Setup environment                                                        |Work on Milestone 2 pdf                              |
+|alavoie3        |Setup environment                                                        |Work on Milestone 2 pdf                              |
+|ktsuji2         |Setup environment                                                        |Work on Milestone 2 pdf                              |
+|yctsou2         |Setup environment                                                        |Work on Milestone 2 pdf                              |
 </br>
+
 
 
 <b>Week 3</b>
