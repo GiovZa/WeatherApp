@@ -68,22 +68,21 @@ Meeting notes: Wec completed Milestone 1 and sent the PDF to the TA in the previ
 
 <b>Week 3</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: mdquan2, mirrak2, ychen275,  ay23, alavoie3, ktsuji2, yctsou2
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We discussed how our Milestone 2 Progress went. We have finished everything except for the CTG which is assigned to Mirra and Gio to finish up. After they complete it Thursday/Friday, we will review everything, before submitting the PDF to the TA. Additionally, we also all need to complete the peer review. If anyone has any issues, they will message on chat. 
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |Update README with weekly meeting notes, work on Milestone 2 pd|Update README with weekly meeting notes, review Milestone 2 pdf, and do peer review			|
+|mirrak2         |Worked on Milestone 2 pdf								                       |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						|
+|gzava3          |Worked on Milestone 2 pdf								                       |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						|
+|ychen275        |Worked on Milestone 2 pdf								                       |Review Milestone 2 pdf and do peer review						                                    |
+|ay23            |Worked on Milestone 2 pdf								                       |Review Milestone 2 pdf and do peer review						                                    |
+|alavoie3        |Worked on Milestone 2 pdf								                       |Review Milestone 2 pdf and do peer review						                                    |
+|ktsuji2         |Worked on Milestone 2 pdf								                       |Review Milestone 2 pdf and do peer review						                                    |
+|yctsou2         |Worked on Milestone 2 pdf								                       |Review Milestone 2 pdf and do peer review						                                    |
 </br>
-
 
 <b>Week 4</b>
 </br>
@@ -93,14 +92,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -112,14 +111,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -131,14 +130,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -150,14 +149,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -169,14 +168,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -188,14 +187,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -207,14 +206,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -226,14 +225,14 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
 
 
@@ -245,12 +244,12 @@ Meeting notes: Explain the overall team progress and a summary of discussion
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
-|                |                                 |                       |
+|mdquan2         |								                 |					             |
+|mirrak2         |								                 |					             |
+|gzava3          |								                 |					             |
+|ychen275        |								                 |					             |
+|ay23            |								                 |					             |
+|alavoie3        |								                 |					             |
+|ktsuji2         |								                 |					             |
+|yctsou2         |								                 |					             |
 </br>
