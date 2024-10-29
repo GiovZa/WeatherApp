@@ -66,12 +66,29 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <ProgressBar
-            android:id="@+id/SignInBar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:visibility="invisible"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/SignInBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/loginErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:text="Error Message Here" />
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignIn"
