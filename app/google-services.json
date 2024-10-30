@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "984716816124",
-    "project_id": "mobileapp-36bb9",
-    "storage_bucket": "mobileapp-36bb9.appspot.com"
+    "project_number": "133662729112",
+    "project_id": "cs427app-cd259",
+    "storage_bucket": "cs427app-cd259.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:984716816124:android:265ec9a62ded51f224b179",
+        "mobilesdk_app_id": "1:133662729112:android:54013c796d08b9a68f01ed",
         "android_client_info": {
           "package_name": "edu.uiuc.cs427app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDNLWj8VkeLIFWvJAtEBA-y0ZhubYoHB9M"
+          "current_key": "AIzaSyCt5HOfWdvjYOjfYJEkU4MbHvJxMh7sm1g"
         }
       ],
       "services": {

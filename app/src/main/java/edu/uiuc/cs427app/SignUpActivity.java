@@ -48,6 +48,8 @@ public class SignUpActivity extends AppCompatActivity {
         signUp_bar = findViewById(R.id.SignUpBar);
         btn_signUp = findViewById(R.id.btnSignUp);
         mAuth = FirebaseAuth.getInstance();
+        mAuth.setLanguageCode("en");
+
         txt_SignIn = findViewById(R.id.txtSignIn);
 
         txt_SignIn.setOnClickListener(new View.OnClickListener() {
@@ -102,6 +104,7 @@ public class SignUpActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(SignUpActivity.this, "You are successfully Signed Up", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                         }
                         else
                         {
