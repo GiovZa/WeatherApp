@@ -86,20 +86,20 @@ Meeting notes: We discussed how our Milestone 2 Progress went. We have finished 
 
 <b>Week 4</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: gzava3, mirrak2, ychen275,  ay23, alavoie3, ktsuji2, yctsou2
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We discussed how to split up Milestone 3 and how to do each task. We try to aim for Task 1 before the next meeting and then Task 2 and 3 for the meetings after. We chose Firebase for our backend and Language to use Java.
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|mdquan2         |								                 |					             |
-|mirrak2         |								                 |					             |
-|gzava3          |								                 |					             |
-|ychen275        |								                 |					             |
-|ay23            |								                 |					             |
-|alavoie3        |								                 |					             |
-|ktsuji2         |								                 |					             |
-|yctsou2         |								                 |					             |
+|mdquan2         |Update README with weekly meeting notes, review Milestone 2 pdf, and do peer review			| Update README with weekly meeting notes      |
+|mirrak2         |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						|                                              |
+|gzava3          |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						| Work on Task 1                               |
+|ychen275        |Review Milestone 2 pdf and do peer review						                                    |                                              |
+|ay23            |Review Milestone 2 pdf and do peer review						                                    | Work on Task 1                               |
+|alavoie3        |Review Milestone 2 pdf and do peer review						                                    |                                              |
+|ktsuji2         |Review Milestone 2 pdf and do peer review						                                    | Work on Task 1                               |
+|yctsou2         |Review Milestone 2 pdf and 																		|
 </br>
 
 
