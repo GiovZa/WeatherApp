@@ -49,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
         txt_SignUp = findViewById(R.id.txtSignUp);
         mAuth=FirebaseAuth.getInstance();
         mAuth.setLanguageCode("en");
+        // display title:team 33, values/strings.xml
+        setTitle(getString(R.string.app_name));
 
         //  "Sign Up" text clicked
         txt_SignUp.setOnClickListener(new View.OnClickListener() {
