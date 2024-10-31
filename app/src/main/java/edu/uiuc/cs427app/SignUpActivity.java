@@ -48,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
         applySavedTheme();
         setContentView(R.layout.activity_sign_up);
 
-        user_name = findViewById(R.id.EditEmail);
+        user_name = findViewById(R.id.SignUpUsername);
         pass_word = findViewById(R.id.SignUpPassword);
         signUp_bar = findViewById(R.id.SignUpBar);
         btn_signUp = findViewById(R.id.btnSignUp);
