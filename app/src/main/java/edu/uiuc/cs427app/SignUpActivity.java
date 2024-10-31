@@ -31,7 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
     private static final String THEME_KEY = "Theme";
 
     TextView txt_SignIn;
-    TextInputEditText user_name, e_mail, pass_word, confirm_password;
+    TextInputEditText user_name, pass_word;
     ProgressBar signUp_bar;
     MaterialButton btn_signUp;
     FirebaseAuth mAuth;
@@ -49,9 +49,7 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         user_name = findViewById(R.id.EditEmail);
-        e_mail = findViewById(R.id.SignUpEmail);
         pass_word = findViewById(R.id.SignUpPassword);
-        confirm_password = findViewById(R.id.ConfirmPassword);
         signUp_bar = findViewById(R.id.SignUpBar);
         btn_signUp = findViewById(R.id.btnSignUp);
         txt_SignIn = findViewById(R.id.txtSignIn);
@@ -104,23 +102,16 @@ public class SignUpActivity extends AppCompatActivity {
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = user_name.getText().toString().trim();
+                String email = user_name.getText().toString().trim();
                 String password = pass_word.getText().toString().trim();
-                String confirmPassword = confirm_password.getText().toString().trim();
-                String email = e_mail.getText().toString().trim();
 
-                if (username.isEmpty())
+                if (email.isEmpty())
                 {
                     user_name.setError("Username is empty");
                     user_name.requestFocus();
                     return;
-                }
-
-                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-                {
-                    e_mail.setError("Enter a valid email address");
-                    e_mail.requestFocus();
-                    return;
+                } else {
+                    email = email + "@gmail.com";
                 }
 
                 if (!validatePassword(password))
@@ -130,12 +121,6 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (!password.equals(confirmPassword))
-                {
-                    confirm_password.setError("Password and Confirm password are different.");
-                    confirm_password.requestFocus();
-                    return;
-                }
 
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
