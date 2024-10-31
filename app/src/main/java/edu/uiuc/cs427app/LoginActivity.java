@@ -77,6 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                     user_name.setError("Username is empty");
                     user_name.requestFocus();
                     return;
+                } else {
+                    email = email + "@gmail.com";
                 }
                 // password empty guard clause
                 if(password.isEmpty())
