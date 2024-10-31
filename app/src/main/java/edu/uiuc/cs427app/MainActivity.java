@@ -37,11 +37,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonChicago = findViewById(R.id.buttonChicago);
         Button buttonLA = findViewById(R.id.buttonLA);
         Button buttonNew = findViewById(R.id.buttonAddLocation);
+        Button buttonOut = findViewById(R.id.buttonSignOut);
 
         buttonChampaign.setOnClickListener(this);
         buttonChicago.setOnClickListener(this);
         buttonLA.setOnClickListener(this);
         buttonNew.setOnClickListener(this);
+        buttonOut.setOnClickListener(this);
 
     }
 
@@ -66,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonAddLocation:
                 // Implement this action to add a new location to the list of locations
+                break;
+            case R.id.buttonSignOut:
+                intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
                 break;
         }
     }
