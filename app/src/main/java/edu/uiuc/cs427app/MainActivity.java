@@ -15,6 +15,8 @@ import android.widget.Button;
 
 //UI
 import android.content.SharedPreferences;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseUser mUser = mAuth.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonLA.setOnClickListener(this);
         buttonNew.setOnClickListener(this);
         buttonOut.setOnClickListener(this);
+
+        // get email from firebase and display title: team 33-"username"
+        mAuth=FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        String user_name = mUser.getEmail();
+        String username = user_name.substring(0, user_name.indexOf("@"));
+        setTitle(getString(R.string.app_name) + "-" + username);
 
     }
 
