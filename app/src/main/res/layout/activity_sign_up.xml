@@ -12,7 +12,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp">
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -21,7 +24,7 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="50sp"
-            android:layout_marginTop="60dp"/>
+            android:layout_marginTop="60dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/EditUsername"
@@ -40,12 +43,8 @@
                 android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:maxLength="20"
-                android:singleLine="true"/>
-
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/LayoutEmail"
@@ -63,8 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:inputType="textEmailAddress"
-                android:singleLine="true"/>
-
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -84,8 +82,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
-                android:singleLine="true"/>
-
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -105,17 +102,35 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
-                android:singleLine="true"/>
-
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Spinner Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose App Theme"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:paddingStart="4dp" />
+
+        <!-- Spinner for App Theme Selection -->
+        <Spinner
+            android:id="@+id/spinnerAppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/black"
+            android:spinnerMode="dropdown"
+            android:padding="10dp" />
 
         <ProgressBar
             android:id="@+id/SignUpBar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignUp"
@@ -127,7 +142,7 @@
             android:paddingEnd="20dp"
             android:paddingBottom="20dp"
             android:text="Sign Up"
-            app:cornerRadius="10dp"/>
+            app:cornerRadius="10dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,9 +154,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already have an account ?"
+                android:text="Already have an account?"
                 android:textColor="@color/black"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/txtSignIn"
@@ -149,9 +164,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign In"
                 android:layout_marginStart="10dp"
-                android:textSize="14sp"/>
-
+                android:textSize="14sp" />
         </LinearLayout>
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

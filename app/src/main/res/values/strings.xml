@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Team #</string>
+
+    <string-array name="layout_options">
+        <item>Light Mode</item>
+        <item>Dark Mode</item>
+        <item>Red Theme</item>
+        <item>Blue Theme</item>
+    </string-array>
 </resources>

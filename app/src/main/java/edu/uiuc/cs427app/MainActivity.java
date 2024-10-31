@@ -13,13 +13,20 @@ import edu.uiuc.cs427app.databinding.ActivityMainBinding;
 
 import android.widget.Button;
 
+//UI
+import android.content.SharedPreferences;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String PREFS_NAME = "AppSettings";
+    private static final String THEME_KEY = "Theme";
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        applySavedTheme();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -59,6 +66,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.buttonAddLocation:
                 // Implement this action to add a new location to the list of locations
+                break;
+        }
+    }
+
+    private void applySavedTheme() {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String theme = preferences.getString(THEME_KEY, "Light Mode");
+        switch (theme) {
+            case "Dark Mode":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "Red Theme":
+                setTheme(R.style.AppTheme_Red);
+                break;
+            case "Blue Theme":
+                setTheme(R.style.AppTheme_Blue);
+                break;
+            case "Light Mode":
+            default:
+                setTheme(R.style.AppTheme_Light);
                 break;
         }
     }

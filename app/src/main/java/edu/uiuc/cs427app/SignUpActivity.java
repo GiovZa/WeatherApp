@@ -1,21 +1,18 @@
 package edu.uiuc.cs427app;
 
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.content.Intent;
 import android.util.Patterns;
 import androidx.annotation.NonNull;
-import android.widget.EditText;
-import android.content.ServiceConnection;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,7 +20,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import android.util.Log;
 import java.util.regex.Pattern;
 
+// UI Imports
+import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
+import android.content.SharedPreferences;
+
 public class SignUpActivity extends AppCompatActivity {
+
+    private static final String PREFS_NAME = "AppSettings";
+    private static final String THEME_KEY = "Theme";
 
     TextView txt_SignIn;
     TextInputEditText user_name, e_mail, pass_word, confirm_password;
@@ -39,6 +44,8 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        applySavedTheme();
         setContentView(R.layout.activity_sign_up);
 
         user_name = findViewById(R.id.EditEmail);
@@ -47,11 +54,43 @@ public class SignUpActivity extends AppCompatActivity {
         confirm_password = findViewById(R.id.ConfirmPassword);
         signUp_bar = findViewById(R.id.SignUpBar);
         btn_signUp = findViewById(R.id.btnSignUp);
+        txt_SignIn = findViewById(R.id.txtSignIn);
         mAuth = FirebaseAuth.getInstance();
         mAuth.setLanguageCode("en");
 
-        txt_SignIn = findViewById(R.id.txtSignIn);
+        // Initialize Spinner
+        Spinner spinnerAppTheme = findViewById(R.id.spinnerAppTheme);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.layout_options, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAppTheme.setAdapter(adapter);
 
+        // Set spinner to the current theme
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String currentTheme = preferences.getString(THEME_KEY, "Light Mode");
+        int spinnerPosition = adapter.getPosition(currentTheme);
+        spinnerAppTheme.setSelection(spinnerPosition);
+
+        // Set up Spinner listener
+        spinnerAppTheme.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedTheme = parent.getItemAtPosition(position).toString();
+                SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+                String currentTheme = preferences.getString(THEME_KEY, "Light Mode");
+                if (!selectedTheme.equals(currentTheme)) {
+                    saveThemePreference(selectedTheme);
+                    applyThemeBasedOnSelection(selectedTheme);
+                    recreate();
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // No action needed
+            }
+        });
+
+        txt_SignIn = findViewById(R.id.txtSignIn);
         txt_SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,6 +157,40 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+
+    // Applies the saved theme from preferences
+    private void applySavedTheme() {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String theme = preferences.getString(THEME_KEY, "Light Mode"); // Default to Light Mode if not set
+        applyThemeBasedOnSelection(theme);
+    }
+
+    // Saves the selected theme to preferences
+    private void saveThemePreference(String theme) {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(THEME_KEY, theme);
+        editor.apply();
+    }
+
+    // Applies the selected theme based on its name
+    private void applyThemeBasedOnSelection(String selectedTheme) {
+        switch (selectedTheme) {
+            case "Dark Mode":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "Red Theme":
+                setTheme(R.style.AppTheme_Red);
+                break;
+            case "Blue Theme":
+                setTheme(R.style.AppTheme_Blue);
+                break;
+            case "Light Mode":
+            default:
+                setTheme(R.style.AppTheme_Light);
+                break;
+        }
+    }
     // Uses regex to check for numbers, special, upper, and lower chars
     private boolean validatePassword(String password) {
         return PASSWORD_PATTERN.matcher(password).matches();
