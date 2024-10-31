@@ -102,5 +102,16 @@
             android:layout_height="wrap_content"
             android:text="Add a location" />
 
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Out" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
