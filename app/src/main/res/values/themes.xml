@@ -28,15 +28,34 @@
     </style>
 
     <!-- Red Theme -->
-    <style name="AppTheme.Red" parent="Theme.MyFirstApp">
-        <item name="backgroundColor">#FF0000</item>
-        <item name="android:windowBackground">#FF0000</item>
+    <style name="AppTheme.Red" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red_400</item>
+        <item name="colorPrimaryVariant">@color/red_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_400</item>
+        <item name="colorSecondaryVariant">@color/red_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background color attribute -->
+        <item name="backgroundColor">#660000</item>
+        <item name="android:windowBackground">#660000</item>
     </style>
 
     <!-- Blue Theme -->
-    <style name="AppTheme.Blue" parent="Theme.MyFirstApp">
+    <style name="AppTheme.Blue" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_300</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_300</item>
+        <item name="colorSecondaryVariant">@color/blue_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Background color attribute -->
         <item name="backgroundColor">#0000FF</item>
         <item name="android:windowBackground">#0000FF</item>
+        <!-- Customize your theme here. -->
     </style>
 
 </resources>
