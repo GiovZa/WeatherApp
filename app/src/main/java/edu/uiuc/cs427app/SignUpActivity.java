@@ -16,6 +16,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 import android.util.Log;
 import java.util.regex.Pattern;
@@ -35,6 +38,9 @@ public class SignUpActivity extends AppCompatActivity {
     ProgressBar signUp_bar;
     MaterialButton btn_signUp;
     FirebaseAuth mAuth;
+
+    FirebaseDatabase NoteRoot;
+    DatabaseReference reference;
 
     // Password pattern (at least one digit, one lower case, one upper case, one special character, and 6-12 characters in length)
     private static final Pattern PASSWORD_PATTERN = Pattern.compile(
@@ -127,6 +133,7 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
+                            addToDatabase();
                             Toast.makeText(SignUpActivity.this, "You are successfully Signed Up", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                         }
@@ -142,7 +149,29 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+    private void addToDatabase() {
+        FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference("users");
 
+        //get username & password values
+        String username = user_name.getText().toString().trim();
+        String password= pass_word.getText().toString().trim();
+        String UI = "";
+        String cities = "";
+
+        UserHelperActivity helperClass = new UserHelperActivity(username, password, UI, cities);
+        DatabaseReference ref1 = reference.child(username);
+        ref1.setValue(helperClass);
+
+        DatabaseReference ref = rootNode.getReference();
+        DatabaseReference childRef1 = ref.child("users").child(username).child("ui").child("themes");
+        childRef1.setValue("");
+        DatabaseReference childRef2 = ref.child("users").child(username).child("ui").child("fonts");
+        childRef2.setValue("");
+        DatabaseReference childRef3 = ref.child("users").child(username).child("ui").child("colors");
+        childRef3.setValue("");
+    }
+    
     // Applies the saved theme from preferences
     private void applySavedTheme() {
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
