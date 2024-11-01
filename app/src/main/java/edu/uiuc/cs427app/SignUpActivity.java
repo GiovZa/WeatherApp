@@ -38,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
     ProgressBar signUp_bar;
     MaterialButton btn_signUp;
     FirebaseAuth mAuth;
+    Spinner spinnerAppTheme;
 
     FirebaseDatabase NoteRoot;
     DatabaseReference reference;
@@ -63,7 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
         mAuth.setLanguageCode("en");
 
         // Initialize Spinner
-        Spinner spinnerAppTheme = findViewById(R.id.spinnerAppTheme);
+        spinnerAppTheme = findViewById(R.id.spinnerAppTheme);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.layout_options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -156,6 +157,7 @@ public class SignUpActivity extends AppCompatActivity {
         //get username & password values
         String username = user_name.getText().toString().trim();
         String password= pass_word.getText().toString().trim();
+        String theme = getSelectedThemeFromSpinner();
         String UI = "";
         String cities = "";
 
@@ -163,15 +165,9 @@ public class SignUpActivity extends AppCompatActivity {
         DatabaseReference ref1 = reference.child(username);
         ref1.setValue(helperClass);
 
-        DatabaseReference ref = rootNode.getReference();
-        DatabaseReference childRef1 = ref.child("users").child(username).child("ui").child("themes");
-        childRef1.setValue("");
-        DatabaseReference childRef2 = ref.child("users").child(username).child("ui").child("fonts");
-        childRef2.setValue("");
-        DatabaseReference childRef3 = ref.child("users").child(username).child("ui").child("colors");
-        childRef3.setValue("");
+        ThemeManager.saveTheme(username, theme);
     }
-    
+
     // Applies the saved theme from preferences
     private void applySavedTheme() {
         SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -205,6 +201,10 @@ public class SignUpActivity extends AppCompatActivity {
                 break;
         }
     }
+    private String getSelectedThemeFromSpinner() {
+        return spinnerAppTheme.getSelectedItem().toString();
+    }
+
     // Uses regex to check for numbers, special, upper, and lower chars
     private boolean validatePassword(String password) {
         return PASSWORD_PATTERN.matcher(password).matches();
