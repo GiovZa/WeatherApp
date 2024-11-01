@@ -92,33 +92,33 @@ Meeting notes: We discussed how to split up Milestone 3 and how to do each task.
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|mdquan2         |Update README with weekly meeting notes, review Milestone 2 pdf, and do peer review			| Update README with weekly meeting notes      |
-|mirrak2         |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						|                                              |
-|gzava3          |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						| Work on Task 1                               |
-|ychen275        |Review Milestone 2 pdf and do peer review						                                    |                                              |
-|ay23            |Review Milestone 2 pdf and do peer review						                                    | Work on Task 1                               |
-|alavoie3        |Review Milestone 2 pdf and do peer review						                                    |                                              |
-|ktsuji2         |Review Milestone 2 pdf and do peer review						                                    | Work on Task 1                               |
-|yctsou2         |Review Milestone 2 pdf and 																		|
+|mdquan2         |Update README with weekly meeting notes, review Milestone 2 pdf, and do peer review			|Update README with weekly meeting notes, Prepare for help for task 2/3 |
+|mirrak2         |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						|Prepare for Task 2                                                     |
+|gzava3          |Work on Component Transition Graph, Review Milestone 2 pdf and do peer review						|Work on Task 1                                                         |
+|ychen275        |Review Milestone 2 pdf and do peer review						                                    |Prepare for Task 3                                                     |
+|ay23            |Review Milestone 2 pdf and do peer review						                                    |Work on Task 1                                                         |  
+|alavoie3        |Review Milestone 2 pdf and do peer review						                                    |Prepare for Task 3                                                     |
+|ktsuji2         |Review Milestone 2 pdf and do peer review						                                    |Prepare for Task 2                                                     |
+|yctsou2         |Review Milestone 2 pdf and 																		                          |Work on Task 1                                                         |
 </br>
 
 
 <b>Week 5</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: mdquan2, gzava3, ychen275,  ay23, alavoie3, ktsuji2, yctsou2
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We discussed how far we've gotten on Task 1 and how to further break up Task 2/3. We aim to complete most of it by Friday and finish the milestone by Saturday. 
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|mdquan2         |								                 |					             |
-|mirrak2         |								                 |					             |
-|gzava3          |								                 |					             |
-|ychen275        |								                 |					             |
-|ay23            |								                 |					             |
-|alavoie3        |								                 |					             |
-|ktsuji2         |								                 |					             |
-|yctsou2         |								                 |					             |
+|mdquan2         |Update README with weekly meeting notes, Prepare for help for task 2/3|Update README with weekly meeting notes, Finish Task 2     |
+|mirrak2         |Prepare for Task 2                                        			      |Finish Task 2												                      |
+|gzava3          |Worked on Task 1														                          |Finish Task 1                              				        |
+|ychen275        |Prepare for Task 3													                          |Finish Task 3                                              |
+|ay23            |Worked on Task 1														                          |Finish Task 1                               				        |
+|alavoie3        |Prepare for Task 3													                          |Finish Task 3                                              |
+|ktsuji2         |Prepare for Task 2													                          |Finish Task 2                               				        |
+|yctsou2         |Worked on Task 1														                          |Finish Task 1                                              |
 </br>
 
 
