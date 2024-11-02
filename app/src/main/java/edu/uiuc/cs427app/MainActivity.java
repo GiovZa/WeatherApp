@@ -1,10 +1,9 @@
 package edu.uiuc.cs427app;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
@@ -18,9 +17,21 @@ import android.widget.Button;
 
 //UI
 import android.content.SharedPreferences;
+
+import com.google.firebase.FirebaseError;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.auth.User;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import android.app.AlertDialog;
+import android.widget.LinearLayout;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser mUser = mAuth.getCurrentUser();
 
+    private LinearLayout locationContainer1;
+    private LinearLayout locationContainer2;
+    //Create database variable
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,49 +65,155 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // The list of locations should be customized per user (change the implementation so that
     // buttons are added to layout programmatically
     private void initializeUI(String username) {
-        // Initialize UI components after setting the content view
-        Button buttonChampaign = findViewById(R.id.buttonChampaign);
-        Button buttonChicago = findViewById(R.id.buttonChicago);
-        Button buttonLA = findViewById(R.id.buttonLA);
+        locationContainer1 = findViewById(R.id.locationContainer1);
+        locationContainer2 = findViewById(R.id.locationContainer2);
+        // Create Button for Adding Location
         Button buttonNew = findViewById(R.id.buttonAddLocation);
         Button buttonOut = findViewById(R.id.buttonSignOut);
 
-        buttonChampaign.setOnClickListener(this);
-        buttonChicago.setOnClickListener(this);
-        buttonLA.setOnClickListener(this);
         buttonNew.setOnClickListener(this);
         buttonOut.setOnClickListener(this);
 
-        // Set the title to show the username
+        // get email from firebase and display title: team 33-"username"
         setTitle(getString(R.string.app_name) + "-" + username);
+
+        //show saved locations
+        DatabaseReference citiesRef = FirebaseDatabase.getInstance().getReference().child("users").child(username).child("cities");
+        citiesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    for (DataSnapshot citySnapshot : snapshot.getChildren()) {
+                        // Get the city name from the snapshot
+                        String city = citySnapshot.getValue(String.class);
+                        addLocationButton(city);
+                        addDeleteLocationButton(city);
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent;
+      Intent intent;
         switch (view.getId()) {
-            case R.id.buttonChampaign:
-                intent = new Intent(this, DetailsActivity.class);
-                intent.putExtra("city", "Champaign");
-                startActivity(intent);
-                break;
-            case R.id.buttonChicago:
-                intent = new Intent(this, DetailsActivity.class);
-                intent.putExtra("city", "Chicago");
-                startActivity(intent);
-                break;
-            case R.id.buttonLA:
-                intent = new Intent(this, DetailsActivity.class);
-                intent.putExtra("city", "Los Angeles");
-                startActivity(intent);
-                break;
             case R.id.buttonAddLocation:
-                // Implement this action to add a new location to the list of locations
+                showAddLocationDialog();
                 break;
+
             case R.id.buttonSignOut:
                 intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
         }
+    }
+
+    private void showAddLocationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Add a Location");
+
+        final EditText input = new EditText(this);
+        input.setHint("Enter city name");
+        builder.setView(input);
+
+        builder.setPositiveButton("Add", (dialog, which) -> {
+            String city = input.getText().toString().trim();
+
+            if (!city.isEmpty()) {
+                addCityToFirebase(city);
+                addLocationButton(city);
+                addDeleteLocationButton(city);
+                Toast.makeText(this, city + " added!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Please enter a city name.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        builder.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());
+
+        builder.show();
+    }
+    //Adding cities to the firebase database
+    private void addCityToFirebase(String city) {
+        // Generate a unique key for each city and save under the user's ID
+        String userEmail = mUser.getEmail();
+        String userId = userEmail.substring(0, userEmail.indexOf("@"));
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        String cityId = databaseReference.child("users").child(userId).child("cities").push().getKey(); //databaseReference.push().getKey();
+        if (cityId != null) {
+            databaseReference.child("users").child(userId).child("cities").child(cityId).setValue(city)//(cityId).setValue(city)
+                    .addOnSuccessListener(aVoid -> {
+                        Toast.makeText(this, "City added to Firebase!", Toast.LENGTH_SHORT).show();
+                    })
+                    .addOnFailureListener(e -> {
+                        Toast.makeText(this, "Failed to add city: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    });
+        }
+    }
+    private void addLocationButton(String city) {
+        // Create a new button for the city
+        Button locationButton = new Button(this);
+        locationButton.setText(city);
+
+        // Set up an OnClickListener to handle navigation to the location details
+        locationButton.setOnClickListener(view -> {
+            Toast.makeText(this, "Selected " + city, Toast.LENGTH_SHORT).show();
+
+        });
+
+        // Add the button to the container
+        locationContainer1.addView(locationButton);
+    }
+    // To delete locations
+    private void addDeleteLocationButton(String city) {
+        // Create a new button for the city
+        Button deleteLocationButton = new Button(this);
+        deleteLocationButton.setText("Delete");
+
+        // Set up an OnClickListener to handle navigation to the location details
+        deleteLocationButton.setOnClickListener(view -> {
+            removeCityFromFirebase(city);
+        });
+
+        // Add the button to the container
+        locationContainer2.addView(deleteLocationButton);
+    }
+    // To remove city from Firebase, uses listener to query since no direct way due to asynchronous
+    private void removeCityFromFirebase(String city) {
+        String userEmail = mUser.getEmail();
+        String userId = userEmail.substring(0, userEmail.indexOf("@"));
+        DatabaseReference citiesRef = FirebaseDatabase.getInstance().getReference()
+                .child("users").child(userId).child("cities");
+
+        // Query cities list to find equivalent city
+        Query citiesQuery = citiesRef.orderByValue().equalTo(city);
+
+        citiesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot citySnapshot : dataSnapshot.getChildren()) {
+                    // Remove the city using its unique key
+                    citySnapshot.getRef().removeValue()
+                            .addOnSuccessListener(aVoid -> {
+                                Toast.makeText(getApplicationContext(), "City removed from Firebase!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                            })
+                            .addOnFailureListener(e -> {
+                                Toast.makeText(getApplicationContext(), "Failed to remove city: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            });
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("RemoveCity", "onCancelled", databaseError.toException());
+            }
+        });
     }
 }
