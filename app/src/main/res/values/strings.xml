@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Team #33</string>
+    <string name="app_name">Team 33</string>
 
     <string-array name="layout_options">
         <item>Light Mode</item>
