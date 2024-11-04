@@ -48,6 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
             "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{6,12}$"
     );
 
+    // Initial onCreate to create usernames/password login activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +107,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
+        // Button for signup
         btn_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,6 +152,7 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+    // Adds username and password to firebase
     private void addToDatabase() {
         FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("users");
@@ -201,6 +204,9 @@ public class SignUpActivity extends AppCompatActivity {
                 break;
         }
     }
+
+
+    // Uses selected theme toString
     private String getSelectedThemeFromSpinner() {
         return spinnerAppTheme.getSelectedItem().toString();
     }

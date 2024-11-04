@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Create database variable
     private DatabaseReference databaseReference;
 
+    // Gets email and sets up original screen and layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    // Creates onclick for adding and signout buttons
     @Override
     public void onClick(View view) {
       Intent intent;
@@ -113,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // Popup dialog after add location button is pressed to add a new location
     private void showAddLocationDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Add a Location");
@@ -121,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         input.setHint("Enter city name");
         builder.setView(input);
 
+        // Creates button and lets you add city to firebase, calls other functions as well
         builder.setPositiveButton("Add", (dialog, which) -> {
             String city = input.getText().toString().trim();
 
@@ -155,6 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     });
         }
     }
+    // Adds location button to go to further information screen for next Milestone
     private void addLocationButton(String city) {
         // Create a new button for the city
         Button locationButton = new Button(this);
@@ -169,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Add the button to the container
         locationContainer1.addView(locationButton);
     }
-    // To delete locations
+    // Adds delete button to be used to delete city from Firebase
     private void addDeleteLocationButton(String city) {
         // Create a new button for the city
         Button deleteLocationButton = new Button(this);
@@ -210,6 +215,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
 
+            // If DB error, log it
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.e("RemoveCity", "onCancelled", databaseError.toException());
