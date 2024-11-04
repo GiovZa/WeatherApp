@@ -164,7 +164,7 @@ public class SignUpActivity extends AppCompatActivity {
         String UI = "";
         String cities = "";
 
-        UserHelperActivity helperClass = new UserHelperActivity(username, password, UI, cities);
+        UserHelper helperClass = new UserHelper(username, password, UI, cities);
         DatabaseReference ref1 = reference.child(username);
         ref1.setValue(helperClass);
 
