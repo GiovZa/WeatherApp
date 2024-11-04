@@ -1,13 +1,13 @@
 package edu.uiuc.cs427app;
 
-public class UserHelperActivity {
+public class UserHelper {
 
     String username, password, ui, cities;
 
-    public UserHelperActivity() {
+    public UserHelper() {
     }
 
-    public UserHelperActivity(String username, String password, String ui, String cities) {
+    public UserHelper(String username, String password, String ui, String cities) {
         this.username = username;
         this.password = password;
         this.ui = ui;
