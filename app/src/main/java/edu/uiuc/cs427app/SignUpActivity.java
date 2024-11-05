@@ -40,7 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     Spinner spinnerAppTheme;
 
-    DatabaseReference databaseReference;;
+    FirebaseDatabase NoteRoot;
+    DatabaseReference reference;
 
     // Password pattern (at least one digit, one lower case, one upper case, one special character, and 6-12 characters in length)
     private static final Pattern PASSWORD_PATTERN = Pattern.compile(
@@ -154,7 +155,7 @@ public class SignUpActivity extends AppCompatActivity {
     // Adds username and password to firebase
     private void addToDatabase() {
         FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
-        databaseReference = rootNode.getReference("users");
+        reference = rootNode.getReference("users");
 
         //get username & password values
         String username = user_name.getText().toString().trim();
@@ -164,20 +165,8 @@ public class SignUpActivity extends AppCompatActivity {
         String cities = "";
 
         UserHelper helperClass = new UserHelper(username, password, UI, cities);
-        DatabaseReference ref1 = databaseReference.child(username);
+        DatabaseReference ref1 = reference.child(username);
         ref1.setValue(helperClass);
-
-        databaseReference = FirebaseDatabase.getInstance().getReference();
-        String cityId1 = databaseReference.child("users").child(username).child("cities").push().getKey(); //databaseReference.push().getKey();
-        databaseReference.child("users").child(username).child("cities").child(cityId1).setValue("Champaign");//(cityId).setValue(city)
-        String cityId2 = databaseReference.child("users").child(username).child("cities").push().getKey(); //databaseReference.push().getKey();
-        databaseReference.child("users").child(username).child("cities").child(cityId2).setValue("Chicago");//(cityId).setValue(city)
-        String cityId3 = databaseReference.child("users").child(username).child("cities").push().getKey(); //databaseReference.push().getKey();
-        databaseReference.child("users").child(username).child("cities").child(cityId3).setValue("New York");//(cityId).setValue(city)
-        String cityId4 = databaseReference.child("users").child(username).child("cities").push().getKey(); //databaseReference.push().getKey();
-        databaseReference.child("users").child(username).child("cities").child(cityId4).setValue("Los Angeles");//(cityId).setValue(city)
-        String cityId5 = databaseReference.child("users").child(username).child("cities").push().getKey(); //databaseReference.push().getKey();
-        databaseReference.child("users").child(username).child("cities").child(cityId5).setValue("San Francisco");//(cityId).setValue(city)
 
         ThemeManager.saveTheme(username, theme);
     }
