@@ -124,20 +124,20 @@ Meeting notes: We discussed how far we've gotten on Task 1 and how to further br
 
 <b>Week 6</b>
 </br>
-Members present: List the NetID of the people who attended the meeting
+Members present: mdquan2, mirrak2, gzava3, ychen275, alavoie3,  yctsou2
 </br>
-Meeting notes: Explain the overall team progress and a summary of discussion
+Meeting notes: We discussed any issues we had with the previous Milestone. We chose to keep the branch as is and use Milestone 4 as the main branch temporarily until Milestone 3 is graded. We split up the tasks into 3 parts. We also discussed better git practice and how to fulfill some of the tasks. 
 </br>
 | NetID          | Progress from last week         | Tasks for next week   |
 | ---------------| --------------------------------| ----------------------|
-|mdquan2         |								                 |					             |
-|mirrak2         |								                 |					             |
-|gzava3          |								                 |					             |
-|ychen275        |								                 |					             |
-|ay23            |								                 |					             |
-|alavoie3        |								                 |					             |
-|ktsuji2         |								                 |					             |
-|yctsou2         |								                 |					             |
+|mdquan2         |Update README with weekly meeting notes, Finish Task 2   |Update README with weekly meeting notes, Work on Task 3  |
+|mirrak2         |Finish Task 2												                     |Work on Task 1                                           |
+|gzava3          |Finish Task 1                              				       |Work on Task 2                                           |
+|ychen275        |Finish Task 3                                            |Work on Task 1                                           |
+|ay23            |Finish Task 1                               				     |Work on Task 2                                           |
+|alavoie3        |Finish Task 3                                            |Work on Task 1                                           |
+|ktsuji2         |Finish Task 2                               				     |Work on Task 2                                           |
+|yctsou2         |Finish Task 1                                            |Work on Task 3                                           |
 </br>
 
 
